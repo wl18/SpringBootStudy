@@ -1,13 +1,13 @@
-package com.wll.myfirstspringboot;
+package com.wl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MyfirstspringbootApplication {
+public class DemohelloApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MyfirstspringbootApplication.class, args);
+        SpringApplication.run(DemohelloApplication.class, args);
     }
 
 }
