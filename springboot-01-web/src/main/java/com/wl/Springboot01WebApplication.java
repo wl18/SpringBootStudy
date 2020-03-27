@@ -1,13 +1,13 @@
-package com.example.demo8888;
+package com.wl;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Demo8888Application {
+public class Springboot01WebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Demo8888Application.class, args);
+        SpringApplication.run(Springboot01WebApplication.class, args);
     }
 
 }
