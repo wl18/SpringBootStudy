@@ -1,5 +1,7 @@
 package com.wl.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,10 +19,11 @@ import java.util.Map;
 @RestController
 public class JDBCController {
 
-
-
     @Autowired
     JdbcTemplate jdbcTemplate;
+
+    Object target;
+    Logger logger = LoggerFactory.getLogger(JDBCController.class);
 
     //查询数据库的所有信息
     //没有实体类，数据库中的东西怎么获取？  用Map
@@ -28,6 +31,7 @@ public class JDBCController {
     public List<Map<String,Object>> userList() {
         String sql = "select * from t_user";
         List<Map<String, Object>> list_maps = jdbcTemplate.queryForList(sql);
+        logger.info("这是日志信息");
         return list_maps;
     }
 

@@ -2,6 +2,7 @@ package com.wl.controller;
 
 import com.wl.mapper.UserMapper;
 import com.wl.pojo.User;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +19,15 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    private static final Logger logger = Logger.getLogger(UserController.class);
+
     //查询全部用户
     @GetMapping("/queryUserList")
     public List<User> queryUserList() {
         List<User> userList = userMapper.queryUserList();
         for(User user : userList) {
-            System.out.println(user);
+            //System.out.println(user);
+            logger.info(user);
         }
         return userList;
     }
