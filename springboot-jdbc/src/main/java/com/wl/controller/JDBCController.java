@@ -1,6 +1,6 @@
 package com.wl.controller;
 
-import org.slf4j.Logger;
+import org.apache.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -22,8 +22,7 @@ public class JDBCController {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    Object target;
-    Logger logger = LoggerFactory.getLogger(JDBCController.class);
+    private static final Logger logger = Logger.getLogger(JDBCController.class);
 
     //查询数据库的所有信息
     //没有实体类，数据库中的东西怎么获取？  用Map
